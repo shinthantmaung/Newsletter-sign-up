@@ -1,0 +1,171 @@
+:root{
+    --gradient: linear-gradient(to right, hsl(347, 100%, 66%), hsl(12, 100%, 63%));
+    --para-1: hsl(234, 29%, 20%);
+    --para-2: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --tomato: hsl(4, 100%, 67%);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-size:1rem;
+    font-weight:400;
+    font-family: 'Roboto' , sans-serif;
+    color: var(--para-2);
+}
+
+body, .form-container,
+.left-container, .form,
+.label-container{
+    display: flex;
+}
+
+.left-container, .form{
+    flex-direction: column;
+}
+
+.left-container, .label-container{
+    justify-content: space-between;
+}
+
+.button,.email-box,.error-box{
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+} 
+
+.label-container, body{
+    align-items: center;
+}
+
+body{
+    background: var(--para-2);
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form-container{
+    background: white;
+    max-width: 820px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.left-container{
+    padding: 4rem 2rem;
+}
+
+.title{
+    color: var(--para-1);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
+
+li{
+    list-style-type: none;
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 21px; 
+    height: 21px; 
+    background-image: url('./images/icon-list.svg');
+}
+
+.button{
+    background:  var(--para-1);
+    color: white;
+    border: none;
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: var(--gradient);
+    transform: scale(1.01);
+    box-shadow: 0px 5px 15px 3px rgba(0,0,0,0.36);
+}
+
+.email-box{
+    border: 0.05rem solid var(--grey);
+    margin-top: 0.5rem;
+}
+
+.email-label, .error-label{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--para-1);
+}
+
+.error-label, .error-box{
+    color: var(--tomato);
+}
+
+.error-box{
+    border: 0.05rem solid var(--tomato);
+    background: hsl(5, 100%, 95%);
+    margin-top: 0.5rem;
+}
+
+@media(max-width: 800px){
+    .form-container{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .left-container{
+        order: 2;
+        padding: 2rem;
+    }
+
+    .right-image{
+        order: 1;
+        content: url('./images/illustration-sign-up-mobile.svg');
+    }
+
+    #mobile-element{
+        margin-bottom: 1rem;
+    }
+}
+
+.confirm-container{
+    background: white;
+    max-width: 500px;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.confirm-img{
+    max-width: 4rem;
+}
+
+#confirm-element{
+    margin-bottom: 1rem;
+}
+
+@media(max-width: 400px){
+    .confirm-container{
+        height: 100vh;
+        border-radius: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    #confirm-button{
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+    }
+}

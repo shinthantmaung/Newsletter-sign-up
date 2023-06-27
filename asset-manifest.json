@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/Newsletter-sign-up/static/js/main.ab5003be.js",
+    "index.html": "/Newsletter-sign-up/index.html",
+    "main.ab5003be.js.map": "/Newsletter-sign-up/static/js/main.ab5003be.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.ab5003be.js"
+  ]
+}
